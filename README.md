@@ -11,7 +11,7 @@ The public resource hub for the Rising Tigers Initiative — activism, contribut
 | `/` | Hub — links to everything below, plus out to [portfolio](https://portfolio.tahreemkarim.xyz), [garden](https://garden.tahreemkarim.xyz), and [free resources](https://tahreemkarim.xyz) |
 | `/activism` | The flagship artifact — Sudan/Congo/Palestine displacement, Bengal tiger/deforestation/pollution |
 | `/artifacts/<slug>/` | Every other piece — articles, dashboards, projects, mine or a contributor's |
-| `/library/` | The sourced claim database everything above cites into — forkable, correctable |
+| `/library/` | The sourced claim collection everything above cites into — forkable, correctable, meant to grow into its own resource over time |
 | `/docs/` | How this repo is organized and how to contribute |
 
 ## The distinction that shapes everything here
