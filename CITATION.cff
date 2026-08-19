@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you cite this work, please cite it as below."
+title: "Rising Tigers Initiative"
+url: "https://risingtigers.tahreemkarim.xyz"
+type: dataset
+authors:
+  - name: "Tahreem Karim"
+license: "CC-BY-4.0"
