@@ -23,7 +23,7 @@
 <meta name="theme-color" content="#17111F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"Math, Murder, and Making a Difference","description":"Sourced figures on Congo, Palestine, Sudan, tigers, forests and air. Every number links to its source.","author":{"@type":"Person","name":"Tahreem Karim","url":"https://portfolio.tahreemkarim.xyz"},"dateModified":"2026-08-20","isAccessibleForFree":true,"inLanguage":"en"}
 </script>
@@ -44,6 +44,7 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--night);color:var(--bone);font-family:var(--body);
   font-size:clamp(.98rem,.95rem + .2vw,1.04rem);line-height:1.55;overflow-x:hidden}
 a{color:inherit}
+strong,b{font-weight:600}
 :focus-visible{outline:2.5px solid var(--candle);outline-offset:3px;border-radius:2px}
 .wrap{max-width:72rem;margin:0 auto;padding:0 var(--pad);position:relative;z-index:2}
 .band{padding:clamp(2.2rem,5.5vw,4rem) 0;position:relative}
@@ -225,7 +226,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 .donate-card:hover,.donate-card:focus-visible{opacity:1}
 .donate-title{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--bone)}
 .donate-line{font-family:var(--body);font-size:.8rem;line-height:1.4;opacity:.82;color:var(--bone)}
-.donate-line b{font-family:var(--mono);font-weight:500;opacity:.75;text-transform:uppercase;font-size:.66rem;
+.donate-line b{font-weight:600;opacity:.75;text-transform:uppercase;font-size:.66rem;
   letter-spacing:.06em;display:block;margin-bottom:.1rem}
 .donate-chip{flex:1 1 160px;min-width:0;text-align:center;font-family:var(--mono);font-size:.74rem;
   text-decoration:none;border:1px solid currentColor;opacity:.85;padding:.6rem .7rem;transition:.15s;
@@ -795,15 +796,6 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
     </div>
   </section>
 
-  <!-- ─────────────────────────────────────────────────────────────
-       PEOPLE I KNOW — template for a new entry:
-
-       <div class="path">
-         <h3>Title of the thing</h3>
-         <p>One or two lines. Who they are to you, why it's worth ten minutes.</p>
-         <span class="mono">free · <a href="URL" target="_blank" rel="noopener">domain.com</a></span>
-       </div>
-       ───────────────────────────────────────────────────────────── -->
   <section class="band day day2">
     <div class="wrap">
       <p class="eyebrow">People I know</p>
