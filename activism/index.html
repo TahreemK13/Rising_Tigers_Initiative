@@ -3,26 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <title>Math, Murder, and Making a Difference</title>
-<meta name="description" content="Congo, Palestine, Sudan, and the Environment). Every figure links to its reference. (No ads) - Upd. August 2026.">
+<meta name="description" content="Congo, Palestine, Sudan, and the environment — sourced figures with ways to help right now. Every number links to its reference. No ads. Upd. August 2026.">
 <link rel="canonical" href="https://risingtigers.tahreemkarim.xyz/activism">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Activism Missions">
-<meta property="og:description" content="News and mortality rates tied to my chosen causes. Ways to help right now.">
+<meta property="og:site_name" content="Rising Tigers Initiative">
+<meta property="og:title" content="Math, Murder, and Making a Difference">
+<meta property="og:description" content="News and mortality rates tied to Congo, Palestine, Sudan, and the environment. Ways to help right now.">
 <meta property="og:url" content="https://risingtigers.tahreemkarim.xyz/activism">
+<meta property="og:image" content="https://risingtigers.tahreemkarim.xyz/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Math, Murder, and Making a Difference — an artifact by the Rising Tigers Initiative">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Math, Murder, and Making a Difference">
+<meta name="twitter:description" content="News and mortality rates tied to Congo, Palestine, Sudan, and the environment. Ways to help right now.">
+<meta name="twitter:image" content="https://risingtigers.tahreemkarim.xyz/assets/og-card.png">
 <meta name="theme-color" content="#17111F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Activism Missions","description":"Sourced figures on Congo, Palestine, Sudan, tigers, forests and air. Every number links to its source.","author":{"@type":"Person","name":"Tahreem Karim","url":"https://portfolio.tahreemkarim.xyz"},"dateModified":"2026-08-18","isAccessibleForFree":true,"inLanguage":"en"}
+{"@context":"https://schema.org","@type":"WebPage","name":"Math, Murder, and Making a Difference","description":"Sourced figures on Congo, Palestine, Sudan, tigers, forests and air. Every number links to its source.","author":{"@type":"Person","name":"Tahreem Karim","url":"https://portfolio.tahreemkarim.xyz"},"dateModified":"2026-08-20","isAccessibleForFree":true,"inLanguage":"en"}
 </script>
 <style>
 :root{
   --night:#17111F; --night2:#211829; --bone:#EFE8DC; --bone2:#E4DACA;
   --ink:#241B2B; --marigold:#F5851F; --rosa:#E8117F; --turquesa:#12A9A6;
-  --morado:#7B4FCF; --verde:#3F9E48; --candle:#FBCB4A;
+  --morado:#7B4FCF; --verde:#3F9E48; --verde-pastel:#c8f0a0; --candle:#F2FF00;
+  --rosa-day:#C1116A; --morado-day:#6B41B8;
   --disp:'Instrument Serif',ui-serif,Georgia,serif;
   --body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:'DM Mono',ui-monospace,Menlo,monospace;
@@ -59,18 +69,18 @@ a{color:inherit}
 /* ── type ── */
 h1,h2,h3{font-family:var(--disp);font-weight:400;letter-spacing:-.005em;line-height:1.06;margin:0}
 h1{font-size:clamp(1.75rem,4.6vw,2.8rem)}
-h2{font-size:clamp(1.45rem,3.8vw,2.15rem);margin-bottom:.45em}
-h3{font-size:clamp(1.05rem,2.4vw,1.26rem)}
+h2{font-size:clamp(1.4rem,3.2vw,1.9rem);margin-bottom:.45em}
+h3{font-size:clamp(1.05rem,2vw,1.2rem)}
 p{margin:0 0 .85em;max-width:58ch}
-.lede{font-size:clamp(1rem,.97rem + .3vw,1.13rem);line-height:1.5;max-width:46ch;opacity:.88}
-.small{font-size:.84rem;line-height:1.55;opacity:.68;max-width:52ch}
-.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;opacity:.62}
-.eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;
+.lede,.subtitle{font-size:clamp(1rem,.98rem + .15vw,1.08rem);line-height:1.5;max-width:46ch;opacity:.88}
+.small{font-size:.85rem;line-height:1.55;opacity:.68;max-width:52ch}
+.mono{font-family:var(--mono);font-size:.68rem;letter-spacing:.02em;opacity:.62}
+.eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
   opacity:.55;margin:0 0 .9rem}
-.epitaph{font-family:var(--disp);font-style:italic;font-size:clamp(1.1rem,2.5vw,1.35rem);
+.epitaph{font-family:var(--disp);font-style:italic;font-size:clamp(1.05rem,2vw,1.2rem);
   line-height:1.35;max-width:38ch;margin:1.7rem 0 0;padding-left:.95rem;
   border-left:2px solid var(--marigold);opacity:.9}
-.day .epitaph{border-left-color:var(--rosa)}
+.day .epitaph{border-left-color:var(--rosa-day)}
 
 /* ── masthead + tab spine ── */
 .mast{padding:clamp(1.4rem,3.5vw,2.2rem) 0 0}
@@ -82,44 +92,40 @@ p{margin:0 0 .85em;max-width:58ch}
 .spine::-webkit-scrollbar{display:none}
 .tab{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
   background:none;color:var(--bone);border:1px solid var(--hair);border-top-width:3px;
-  border-top-color:currentColor;padding:.62rem 1.05rem;cursor:pointer;transition:.18s;opacity:.5;
-  flex:0 0 auto;white-space:nowrap;min-height:44px}
+  border-top-color:currentColor;padding:.85rem 1.6rem;cursor:pointer;transition:.18s;opacity:.55;
+  flex:1 1 0;white-space:nowrap;min-height:44px;text-align:center}
 .tab:hover{opacity:.85}
 .tab[aria-selected=true]{opacity:1;background:rgba(255,255,255,.055);border-color:var(--hair);
   border-top-color:currentColor;border-top-width:3px}
 .tab .n{opacity:.5;margin-left:.5rem;font-size:.68rem}
-.t-war{color:var(--rosa)} .t-cons{color:var(--verde)} .t-humanity{color:var(--turquesa)}
+.t-war{color:var(--rosa)} .t-cons{color:var(--verde-pastel)} .t-humanity{color:var(--turquesa)}
 .tab[aria-selected=true] .lbl{color:var(--bone)}
 .tab .lbl{color:var(--bone);opacity:.92}
-.seen{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--candle);
-  margin-left:.45rem;vertical-align:middle;opacity:0;transition:opacity .4s}
-.tab.visited .seen{opacity:.85}
 [hidden]{display:none!important}
 
 /* Phones: three tabs must fit one row without wrapping or scrolling.
    Tighter tracking + padding buys back the ~110px "CONSERVATION" needs. */
 @media(max-width:26rem){
-  .tab{font-size:.64rem;letter-spacing:.03em;padding:.72rem .5rem}
+  .tab{font-size:.64rem;letter-spacing:.03em;padding:.8rem .7rem}
   .tab .n{margin-left:.3rem;font-size:.6rem}
-  .seen{width:4px;height:4px;margin-left:.3rem}
 }
 /* Smallest phones (~320px): shave a little further so nothing clips. */
 @media(max-width:21rem){
   .spine{gap:.28rem}
-  .tab{font-size:.6rem;letter-spacing:.01em;padding:.72rem .4rem}
+  .tab{font-size:.6rem;letter-spacing:.01em;padding:.78rem .55rem}
 }
 /* Tablet: current desktop sizing already fits with room to spare. */
 
 /* ── vault wall (signature) ── */
 .field{display:grid;gap:1.4rem;margin-top:clamp(1.4rem,3.5vw,2.1rem)}
 .fhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .8rem;margin-bottom:.5rem}
-.fplace{font-family:var(--disp);font-size:1.14rem}
-.fval{font-family:var(--mono);font-size:.7rem;opacity:.55}
+.fplace{font-family:var(--disp);font-size:1.05rem}
+.fval{font-family:var(--mono);font-size:.68rem;opacity:.55}
 .vaults{display:flex;flex-wrap:wrap;gap:2px;max-width:56rem}
 .vault{width:14px;height:9px;flex:0 0 auto;background:currentColor;opacity:0;border-radius:1px 1px 0 0;
   animation:seal .4s ease forwards;box-shadow:inset 0 -1px 0 rgba(0,0,0,.3)}
 @keyframes seal{from{opacity:0;transform:translateY(-3px)}to{opacity:.8;transform:none}}
-.v-congo{color:var(--turquesa)} .v-pal{color:var(--rosa)} .v-sudan{color:var(--marigold)}
+.v-congo{color:var(--turquesa)} .v-pal{color:var(--rosa)} .v-sudan{color:var(--verde-pastel)}
 .fnote{margin-top:1.1rem;padding-top:.8rem;border-top:1px solid var(--hair)}
 
 /* ── cards ── */
@@ -133,17 +139,18 @@ p{margin:0 0 .85em;max-width:58ch}
 .card::before{content:"";position:absolute;inset:auto 0 100% 0;height:4px;background:currentColor}
 .k-marigold{color:var(--marigold)} .k-turquesa{color:var(--turquesa)} .k-rosa{color:var(--rosa)}
 .k-morado{color:var(--morado)} .k-verde{color:var(--verde)}
+.day .k-morado{color:var(--morado-day)}
 .night .card>*{color:var(--bone)} .day .card>*{color:var(--ink)}
-.place{font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;
+.place{font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
   color:currentColor!important;opacity:.9;margin:0}
-.stat{font-family:var(--disp);font-size:clamp(1.9rem,4.8vw,2.4rem);line-height:1;
+.stat{font-family:var(--disp);font-size:clamp(1.5rem,3.6vw,1.9rem);line-height:1;
   color:currentColor!important;word-break:break-word;margin:.15rem 0 0}
-.unit{font-size:.82rem;line-height:1.4;opacity:.68;margin:.15rem 0 .2rem;max-width:34ch}
+.unit{font-size:.85rem;line-height:1.4;opacity:.68;margin:.15rem 0 .2rem;max-width:34ch}
 .card dl{margin:0} .card dd{margin:0;font-size:.9rem;line-height:1.5}
-.card dt{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+.card dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
   opacity:.5;margin:.5rem 0 .12rem}
 .src{margin-top:auto;padding-top:.8rem;display:flex;flex-wrap:wrap;gap:.3rem}
-.chip{font-family:var(--mono);font-size:.63rem;text-decoration:none;border:1px solid var(--hair);
+.chip{font-family:var(--mono);font-size:.62rem;text-decoration:none;border:1px solid var(--hair);
   padding:.3rem .48rem;opacity:.72;transition:.15s;white-space:nowrap}
 .chip:hover,.chip:focus-visible{opacity:1;border-color:currentColor;color:currentColor}
 
@@ -153,11 +160,11 @@ p{margin:0 0 .85em;max-width:58ch}
 @media(min-width:52rem){.stories{grid-template-columns:repeat(3,1fr);gap:1.7rem}}
 .story{display:flex;flex-direction:column;gap:.35rem;border-top:3px solid currentColor;padding-top:.8rem}
 .story>*{color:var(--ink)}
-.story .who{font-family:var(--mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;
+.story .who{font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
   color:currentColor!important;opacity:.95}
 .story p{font-size:.93rem;max-width:38ch;opacity:.82;margin:0}
 .story .chip{align-self:flex-start;margin-top:.4rem}
-.s-turquesa{color:#0A7C7A} .s-rosa{color:#B00D62} .s-marigold{color:#B45C0A}
+.s-turquesa{color:var(--turquesa)} .s-rosa{color:var(--rosa-day)} .s-marigold{color:var(--marigold)}
 
 /* ── chart ── */
 .proof{display:grid;gap:clamp(1.2rem,3.5vw,2.2rem)}
@@ -174,15 +181,18 @@ p{margin:0 0 .85em;max-width:58ch}
 
 /* ── action rows ── */
 .acts{display:grid;margin-top:clamp(1.1rem,3vw,1.7rem);border-top:1px solid var(--hair)}
-.act{display:grid;grid-template-columns:auto 1fr;gap:.35rem .9rem;align-items:start;
+.act{display:grid;grid-template-columns:4.5rem 1fr;gap:.35rem .9rem;align-items:start;
   padding:.95rem 0;border-bottom:1px solid var(--hair);text-decoration:none;transition:.2s}
-@media(min-width:46rem){.act{grid-template-columns:6rem 1fr auto;align-items:baseline;gap:1.4rem}}
+.act .go{grid-column:1/-1}
+@media(min-width:46rem){
+  .act{grid-template-columns:6rem 1fr auto;align-items:baseline;gap:1.4rem}
+  .act .go{grid-column:auto}
+}
 .cost{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
-  color:#B45C0A}
-.night .cost{color:var(--candle)}
+  color:var(--marigold)}
 .act h3{margin-bottom:.12rem}
 .act p{margin:0;font-size:.88rem;opacity:.74;max-width:48ch}
-.go{font-family:var(--mono);font-size:.66rem;opacity:.55;white-space:nowrap}
+.go{font-family:var(--mono);font-size:.68rem;opacity:.55;white-space:nowrap}
 a.act:hover .go,a.act:focus-visible .go{opacity:1;text-decoration:underline;text-underline-offset:.2em}
 a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-offset:.18em}
 
@@ -191,7 +201,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 @media(min-width:46rem){.paths{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:72rem){.paths{grid-template-columns:repeat(3,1fr)}}
 .path{border-left:3px solid var(--turquesa);padding:.1rem 0 .1rem .9rem}
-.path:nth-child(3n+2){border-left-color:var(--rosa)}
+.path:nth-child(3n+2){border-left-color:var(--rosa-day)}
 .path:nth-child(3n+3){border-left-color:var(--verde)}
 .path h3{margin-bottom:.16rem}
 .path p{font-size:.87rem;margin:0 0 .26rem;opacity:.76;max-width:44ch}
@@ -204,13 +214,32 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 .srclist a{text-decoration:underline;text-underline-offset:.15em;opacity:.68}
 .srclist a:hover{opacity:1}
 .sign{display:flex;flex-wrap:wrap;gap:.5rem 1.3rem;align-items:baseline;margin-top:1.4rem}
-.sign a{font-family:var(--mono);font-size:.72rem;text-decoration:underline;text-underline-offset:.2em}
-.payoff{display:flex;gap:.85rem;align-items:center;margin:1.6rem 0 0;padding:.9rem 1rem;
-  border:1px solid var(--hair);border-left:3px solid var(--candle);max-width:44ch;
-  opacity:0;transform:translateY(6px);transition:.6s}
-.payoff.on{opacity:1;transform:none}
-.payoff svg{flex:0 0 auto;width:34px;height:34px}
-.payoff p{margin:0;font-size:.88rem}
+.sign a{font-family:var(--mono);font-size:.68rem;text-decoration:underline;text-underline-offset:.2em}
+.src-head{display:flex;align-items:center;gap:.5rem;margin-top:2rem}
+.flower-icon{width:18px;height:18px;flex:0 0 auto}
+
+/* ── donate cards + link strips ── */
+.donate-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.6rem}
+.donate-card{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:.4rem;
+  border:1px solid currentColor;padding:.9rem 1rem;text-decoration:none;opacity:.92;transition:.15s}
+.donate-card:hover,.donate-card:focus-visible{opacity:1}
+.donate-title{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--bone)}
+.donate-line{font-family:var(--body);font-size:.8rem;line-height:1.4;opacity:.82;color:var(--bone)}
+.donate-line b{font-family:var(--mono);font-weight:500;opacity:.75;text-transform:uppercase;font-size:.66rem;
+  letter-spacing:.06em;display:block;margin-bottom:.1rem}
+.donate-chip{flex:1 1 160px;min-width:0;text-align:center;font-family:var(--mono);font-size:.74rem;
+  text-decoration:none;border:1px solid currentColor;opacity:.85;padding:.6rem .7rem;transition:.15s;
+  color:var(--bone);line-height:1.35}
+.donate-chip:hover,.donate-chip:focus-visible{opacity:1}
+.chip-live{color:var(--marigold)}
+.donate-more{margin-top:.9rem}
+.donate-more summary{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+  opacity:.55;cursor:pointer;list-style:none;transition:.15s}
+.donate-more summary:hover{opacity:.85}
+.donate-more summary::-webkit-details-marker{display:none}
+.donate-more summary::before{content:'+ ';opacity:.8}
+.donate-more[open] summary::before{content:'– '}
+.donate-more[open] summary{margin-bottom:.2rem}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;
@@ -227,15 +256,14 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 <header class="band night mast">
   <div class="ghosts" aria-hidden="true"><span class="gh gh1"></span><span class="gh gh2"></span></div>
   <div class="wrap">
-    <p class="brand">An artifact by the Rising Tigers Initiative: Tahreem Karim</p>
+    <p class="brand">By the Rising Tigers Initiative: Tahreem Karim</p>
     <h1>Math, Murder, and Making a Difference</h1>
     <p class="subtitle">News and mortality rates tied to my chosen causes. Ways to help right now.</p>
-    <p class="epitaph" style="margin-bottom:1.6rem">Argue with: <br>- backed up sources & research date stamps, <br>- the UN, <br> - a wall.</p>
 
     <div class="spine" role="tablist" aria-label="Sections" hidden>
-      <button class="tab t-war"  role="tab" id="tab-war"  aria-controls="p-war"  aria-selected="true"><span class="lbl">War</span><span class="n">3</span><span class="seen"></span></button>
-      <button class="tab t-cons" role="tab" id="tab-cons" aria-controls="p-cons" aria-selected="false"><span class="lbl">Conservation</span><span class="n">3</span><span class="seen"></span></button>
-      <button class="tab t-humanity" role="tab" id="tab-humanity" aria-controls="p-humanity" aria-selected="false"><span class="lbl">Humanity</span><span class="n">∞</span><span class="seen"></span></button>
+      <button class="tab t-war"  role="tab" id="tab-war"  aria-controls="p-war"  aria-selected="true"><span class="lbl">War</span><span class="n">3</span></button>
+      <button class="tab t-cons" role="tab" id="tab-cons" aria-controls="p-cons" aria-selected="false"><span class="lbl">Conservation</span><span class="n">3</span></button>
+      <button class="tab t-humanity" role="tab" id="tab-humanity" aria-controls="p-humanity" aria-selected="false"><span class="lbl">Humanity</span><span class="n">∞</span></button>
     </div>
   </div>
 </header>
@@ -248,24 +276,62 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
     <div class="ghosts" aria-hidden="true"><span class="gh gh2"></span></div>
     <div class="wrap">
       <p class="eyebrow">Congo · Palestine · Sudan</p>
-      <h2>People forced from home.</h2>
-      <p class="lede">One vault = 100,000 people.</p>
+      <p class="lede">One vault = 100,000 people forced from home.</p>
 
       <div class="field">
         <div>
           <div class="fhead"><span class="fplace">Congo</span><span class="fval">7,000,000+ displaced mostly over coltan.</span></div>
-          <div class="vaults v-congo" data-n="70"></div>
+          <div class="vaults v-congo" data-n="70" aria-hidden="true"></div>
         </div>
         <div>
           <div class="fhead"><span class="fplace">Palestine</span><span class="fval">~1,900,000 displaced in Gaza · nine in ten people</span></div>
-          <div class="vaults v-pal" data-n="19"></div>
+          <div class="vaults v-pal" data-n="19" aria-hidden="true"></div>
         </div>
         <div>
           <div class="fhead"><span class="fplace">Sudan</span><span class="fval">13,600,000 uprooted · largest displacement crisis on earth</span></div>
-          <div class="vaults v-sudan" data-n="136"></div>
+          <div class="vaults v-sudan" data-n="136" aria-hidden="true"></div>
         </div>
       </div>
       <p class="mono fnote">Different agencies, 2024–2026.</p>
+
+      <p class="eyebrow" style="margin:1.6rem 0 0">Help right now</p>
+      <div class="donate-row">
+        <a class="donate-card v-congo" href="https://panzifoundation.org/donate/" target="_blank" rel="noopener">
+          <span class="donate-title">Congo — Panzi Foundation ↗</span>
+          <span class="donate-line"><b>Need</b>Displacement past 7M, sexual violence rising, aid shrinking.</span>
+          <span class="donate-line"><b>For</b>Trauma surgery, mental health care, legal aid, job training.</span>
+          <span class="donate-line"><b>Trust</b>Congolese-run; founded by 2018 Nobel Peace laureate Dr. Mukwege.</span>
+        </a>
+        <a class="donate-card v-pal" href="https://donate.unrwa.org/int/en/gaza" target="_blank" rel="noopener">
+          <span class="donate-title">Palestine — UNRWA Gaza Appeal ↗</span>
+          <span class="donate-line"><b>Need</b>US funding still withheld; largest healthcare provider in Gaza.</span>
+          <span class="donate-line"><b>For</b>Cash aid, food, shelter, healthcare, education for refugees.</span>
+          <span class="donate-line"><b>Trust</b>UN agency, mandated since 1949; ~11% overhead, rest direct aid.</span>
+        </a>
+        <a class="donate-card v-sudan" href="https://www.mutualaidsudan.org/donate" target="_blank" rel="noopener">
+          <span class="donate-title">Sudan — Mutual Aid Sudan ↗</span>
+          <span class="donate-line"><b>Need</b>Emergency Response Rooms get under 1% of global aid funding.</span>
+          <span class="donate-line"><b>For</b>Communal kitchens, medical care, evacuations, water repairs.</span>
+          <span class="donate-line"><b>Trust</b>$0.95 of every $1 reaches responders within two weeks.</span>
+        </a>
+      </div>
+      <details class="donate-more">
+        <summary>More organizations</summary>
+        <div class="donate-row">
+          <a class="donate-chip" href="https://www.doctorswithoutborders.org/" target="_blank" rel="noopener">Doctors Without Borders (MSF) ↗</a>
+          <a class="donate-chip" href="https://www.rescue.org/" target="_blank" rel="noopener">International Rescue Committee ↗</a>
+          <a class="donate-chip" href="https://www.nrc.no/" target="_blank" rel="noopener">Norwegian Refugee Council ↗</a>
+          <a class="donate-chip" href="https://www.unhcr.org/donate-unhcr.html" target="_blank" rel="noopener">UNHCR ↗</a>
+          <a class="donate-chip" href="https://wck.org/donate/" target="_blank" rel="noopener">World Central Kitchen ↗</a>
+        </div>
+      </details>
+
+      <p class="eyebrow" style="margin:1.6rem 0 0">Stay current</p>
+      <div class="donate-row">
+        <a class="donate-chip chip-live" href="https://www.acaps.org/en/countries/drc" target="_blank" rel="noopener">Congo — ACAPS tracker ↗</a>
+        <a class="donate-chip chip-live" href="https://gisha.org/en/gaza-now-facts-and-figures/" target="_blank" rel="noopener">Palestine — Gisha live figures ↗</a>
+        <a class="donate-chip chip-live" href="https://www.mutualaidsudan.org/" target="_blank" rel="noopener">Sudan — Mutual Aid Sudan updates ↗</a>
+      </div>
     </div>
   </section>
 
@@ -283,7 +349,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
             <dd>M23 (the 'March 23 Movement'), backed by Rwanda, took Goma and Bukavu in 2025. Since early 2026 both sides have used armed drones and heavy artillery in neighbourhoods. <br> Ebola outbreak in May.</dd>
             <dt>Why?</dt>
             <dd>The Rubaya mining area supplies ~<strong>15–30% of the world's coltan</strong>. Coltan - metallic ore refined into the element <strong>tantalum</strong>. <br>Tantalum can hold a high electrical charge in a small space, which is why it is used in virtually every modern phone and computer.</dd>
-            <dt>Why it's silent/dt>
+            <dt>Why it's silent</dt>
             <dd>It's been going on for thirty years and nearly impossible to boycott. The computer this project is being worked on (and likely any used to view it) requires coltan.</dd>
           </dl>
           <div class="src">
@@ -345,12 +411,12 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
           <rect x="23" y="39" width="14" height="2.6" fill="#EFE8DC"/>
         </g></defs>
         <line x1="0" y1="3" x2="720" y2="3" stroke="#241B2B" stroke-opacity=".3" stroke-width="1.5"/>
-        <use href="#flag" x="0" color="#12A9A6"/><use href="#flag" x="60" color="#E8117F"/>
-        <use href="#flag" x="120" color="#F5851F"/><use href="#flag" x="180" color="#7B4FCF"/>
-        <use href="#flag" x="240" color="#3F9E48"/><use href="#flag" x="300" color="#FBCB4A"/>
-        <use href="#flag" x="360" color="#12A9A6"/><use href="#flag" x="420" color="#E8117F"/>
-        <use href="#flag" x="480" color="#F5851F"/><use href="#flag" x="540" color="#7B4FCF"/>
-        <use href="#flag" x="600" color="#3F9E48"/><use href="#flag" x="660" color="#FBCB4A"/>
+        <use href="#flag" x="0" color="var(--rosa-day)"/><use href="#flag" x="60" color="var(--turquesa)"/>
+        <use href="#flag" x="120" color="var(--verde-pastel)"/><use href="#flag" x="180" color="var(--morado-day)"/>
+        <use href="#flag" x="240" color="var(--candle)"/><use href="#flag" x="300" color="var(--marigold)"/>
+        <use href="#flag" x="360" color="var(--verde-pastel)"/><use href="#flag" x="420" color="var(--candle)"/>
+        <use href="#flag" x="480" color="var(--turquesa)"/><use href="#flag" x="540" color="var(--marigold)"/>
+        <use href="#flag" x="600" color="var(--rosa-day)"/><use href="#flag" x="660" color="var(--morado-day)"/>
       </svg>
 
       <p class="eyebrow">Beyond the news</p>
@@ -606,6 +672,31 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 
   <section class="band day day2">
     <div class="wrap">
+      <p class="eyebrow">Not sourced data. Just true</p>
+      <h2>On not belonging in science.</h2>
+      <p class="lede">First-person, not peer-reviewed. Filed here because they hit the same way the rest of this page tries to.</p>
+      <div class="paths">
+        <div class="path">
+          <h3>I Don't Belong in Science</h3>
+          <p>Olga Botvinnik — a computational biologist with every credential that's supposed to make belonging automatic, on why it wasn't.</p>
+          <span class="mono"><a href="https://olgabotvinnik.com/blog/i-dont-belong-in-science/" target="_blank" rel="noopener">olgabotvinnik.com</a></span>
+        </div>
+        <div class="path">
+          <h3>Asexuality and Imposter Syndrome</h3>
+          <p>What being an outsider twice over — queer and a scientist who doesn't feel like one — actually teaches about belonging.</p>
+          <span class="mono"><a href="https://sisterstem.org/2021/03/23/what-my-asexuality-and-imposter-syndrome-are-teaching-me-about-belonging/" target="_blank" rel="noopener">sisterstem.org</a></span>
+        </div>
+        <div class="path">
+          <h3>How Useful Is "Impostor Syndrome"?</h3>
+          <p>An Aeon essay arguing the term itself hides the real structure — class, not just confidence — and questioning whether "fitting" is even the right goal.</p>
+          <span class="mono"><a href="https://aeon.co/essays/how-useful-is-impostor-syndrome-in-academia" target="_blank" rel="noopener">aeon.co</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band day day2">
+    <div class="wrap">
       <p class="eyebrow">Ten minutes, real contribution</p>
       <h2>You can do actual science tonight.</h2>
       <p class="lede">No degree, no fee, no application. The data goes into real papers.</p>
@@ -681,6 +772,26 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
           <span class="mono">graduate · in person · <a href="https://scicom.ucsc.edu/" target="_blank" rel="noopener">scicom.ucsc.edu</a></span>
         </div>
       </div>
+
+      <p class="eyebrow" style="margin-top:2.2rem">If any of this made you doubt yourself</p>
+      <p class="small" style="margin:0 0 .9rem">Read this instead. The feeling is common enough to have its own literature.</p>
+      <div class="paths">
+        <div class="path">
+          <h3>I don't belong in science</h3>
+          <p>Olga Botvinnik on the barriers — financial, institutional, felt — that keep people out of research they'd be good at.</p>
+          <span class="mono"><a href="https://olgabotvinnik.com/blog/i-dont-belong-in-science/" target="_blank" rel="noopener">olgabotvinnik.com</a></span>
+        </div>
+        <div class="path">
+          <h3>I was worried I didn't belong</h3>
+          <p>A Ph.D. student in Morocco, until he found out how many other researchers felt the exact same whisper.</p>
+          <span class="mono"><a href="https://www.science.org/content/article/i-was-worried-i-didn-t-belong-science-until-i-discovered-many-researchers-feel-same-way" target="_blank" rel="noopener">science.org</a></span>
+        </div>
+        <div class="path">
+          <h3>How useful is "impostor syndrome"?</h3>
+          <p>An Aeon essay that pushes back on the term itself — class, not just confidence, decides who feels they fit.</p>
+          <span class="mono"><a href="https://aeon.co/essays/how-useful-is-impostor-syndrome-in-academia" target="_blank" rel="noopener">aeon.co</a></span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -727,16 +838,6 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
       <p class="small" style="margin-top:1.2rem">Adding more as I get people's permission to link them. If you've written something free and good, tell me.</p>
     </div>
   </section>
-
-  <section class="band day">
-    <div class="wrap">
-      <p class="eyebrow">Housekeeping</p>
-      <h2>If this is too much today.</h2>
-      <p class="lede">Reading atrocity all day is a known occupational hazard for the people who do it professionally. They pace it. You're allowed to.</p>
-      <p>Close the tab. Nothing here expires. The Sudanese volunteers are not counting on your Tuesday.</p>
-      <p class="small">Dart Center for Journalism and Trauma keeps free, unsentimental guidance on this — written for reporters, useful for anyone. <a href="https://dartcenter.org/topic/self-care" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:.15em">dartcenter.org</a></p>
-    </div>
-  </section>
 </div>
 </main>
 
@@ -745,21 +846,27 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
   <div class="ghosts" aria-hidden="true"><span class="gh gh2" style="animation-duration:72s"></span></div>
   <div class="wrap">
 
-    <div class="payoff" id="payoff">
-      <svg viewBox="0 0 100 100" aria-hidden="true">
+    <p class="eyebrow">Housekeeping</p>
+    <h2>If this is too much today.</h2>
+    <p class="lede">Reading atrocity all day is a known occupational hazard for professionals. They pace themselves so we should too.</p>
+    <p>Close the tab. Nothing here will expire.</p>
+    <p class="small">Dart Center for Journalism and Trauma provides free, unsentimental guidance for reporters, useful for anyone. <a href="https://dartcenter.org/topic/self-care" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:.15em">dartcenter.org</a></p>
+
+    <p class="epitaph">If you have an issue with these statistics, I encourage you to argue with: <br>- backed up sources & research date stamps <br>- the UN <br>- a wall.</p>
+
+    <div class="src-head">
+      <svg class="flower-icon" viewBox="0 0 100 100" aria-hidden="true">
         <defs><path id="pet" d="M50 39C44 27 44 19 50 9c6 10 6 18 0 30"/></defs>
-        <g fill="none" stroke="#FBCB4A" stroke-width="2.6" stroke-linecap="round">
+        <g fill="none" stroke="var(--candle)" stroke-width="2.6" stroke-linecap="round">
           <use href="#pet"/><use href="#pet" transform="rotate(45 50 50)"/>
           <use href="#pet" transform="rotate(90 50 50)"/><use href="#pet" transform="rotate(135 50 50)"/>
           <use href="#pet" transform="rotate(180 50 50)"/><use href="#pet" transform="rotate(225 50 50)"/>
           <use href="#pet" transform="rotate(270 50 50)"/><use href="#pet" transform="rotate(315 50 50)"/>
         </g>
-        <circle cx="50" cy="50" r="8.5" fill="#F5851F"/>
+        <circle cx="50" cy="50" r="8.5" fill="var(--marigold)"/>
       </svg>
-      <p>A little sunshine. Free reading, tools, work by people I know — here purely because they resonated with me and may help someone else someday. This resource will grow. Nothing is behind a paywall.</p>
+      <p class="eyebrow" style="margin:0">Sources</p>
     </div>
-
-    <p class="eyebrow" style="margin-top:2rem">Sources</p>
     <p class="small" style="margin:0 0 .9rem">Every source below also lives as a plain file you can read, fork or correct —
       <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative/blob/main/library/sources.md" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:.15em">github.com/TahreemK13/Rising_Tigers_Initiative</a>.
       If you think a number here is wrong, that's the file to argue with.</p>
@@ -787,6 +894,26 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
       <li>American Lung Association — <a href="https://www.lung.org/research/sota" target="_blank" rel="noopener">State of the Air 2026</a></li>
     </ul>
 
+    <p class="eyebrow" style="margin-top:2.2rem">Other causes</p>
+    <p class="small" style="margin:0 0 .9rem">Not the biggest name in the space. The one activists actually give to.</p>
+    <div class="paths">
+      <div class="path">
+        <h3>Breast Cancer Action</h3>
+        <p>Calls out pink-ribbon marketing instead of running it. Pushes for prevention and the research the big charities skip.</p>
+        <span class="mono"><a href="https://www.bcaction.org/" target="_blank" rel="noopener">bcaction.org</a></span>
+      </div>
+      <div class="path">
+        <h3>SurvJustice</h3>
+        <p>Free legal representation for sexual assault survivors in campus and criminal proceedings. Casework, not a hotline.</p>
+        <span class="mono"><a href="https://survjustice.org/" target="_blank" rel="noopener">survjustice.org</a></span>
+      </div>
+      <div class="path" style="border-left-color:var(--verde-pastel)">
+        <h3>NDN Collective</h3>
+        <p>Indigenous-led. Funds land defenders and organizers directly — land defense, climate justice, LANDBACK.</p>
+        <span class="mono"><a href="https://ndncollective.org/" target="_blank" rel="noopener">ndncollective.org</a></span>
+      </div>
+    </div>
+
     <p class="epitaph" style="border-left-color:var(--candle)">Essentially a page for counting the dead...</p>
     <p class="small" style="margin-top:1.2rem">If a statistic is wrong or stale, let me know. The repo will document the error/fix & your name as reference.</p>
     <p style="margin-top:.6rem"><a class="chip" href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">github.com/TahreemK13/Rising_Tigers_Initiative ↗</a></p>
@@ -805,7 +932,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 (function(){
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches,
       tabs = [].slice.call(document.querySelectorAll('.tab')),
-      seen = {}, io;
+      io;
 
   /* ── build the vault wall ── */
   document.querySelectorAll('.vaults').forEach(function(el){
@@ -846,8 +973,6 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
       document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
       if (on) t.classList.add('visited');
     });
-    seen[id] = 1;
-    if (Object.keys(seen).length === 3) document.getElementById('payoff').classList.add('on');
     /* sandboxed previews (about:srcdoc) reject replaceState — harmless, ignore it */
     if (push) try { history.replaceState(null, '', '#' + id); } catch (e) {}
   }
