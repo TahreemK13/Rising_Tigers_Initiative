@@ -79,10 +79,11 @@ h2{font-size:clamp(1.4rem,3.2vw,1.9rem);margin-bottom:.45em}
 h3{font-size:clamp(1.05rem,2vw,1.2rem)}
 p{margin:0 0 .85em;max-width:58ch}
 .lede,.subtitle{font-size:clamp(1rem,.98rem + .15vw,1.08rem);line-height:1.5;max-width:46ch;opacity:.88}
+.subtitle{max-width:58ch}
 .small{font-size:.85rem;line-height:1.55;opacity:.68;max-width:52ch}
 .mono{font-family:var(--mono);font-size:.68rem;letter-spacing:.02em;opacity:.62}
 .eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
-  opacity:.55;margin:0 0 .9rem}
+  opacity:.55;margin:0 0 .9rem;max-width:none}
 .epitaph{font-family:var(--disp);font-style:italic;font-size:clamp(1.05rem,2vw,1.2rem);
   line-height:1.35;max-width:38ch;margin:1.7rem 0 0;padding-left:.95rem;
   border-left:2px solid var(--marigold);opacity:.9}
@@ -91,7 +92,7 @@ p{margin:0 0 .85em;max-width:58ch}
 /* ── masthead + tab spine ── */
 .mast{padding:clamp(1.4rem,3.5vw,2.2rem) 0 0}
 .brand{font-family:var(--mono);font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;
-  color:var(--marigold);margin:0 0 1.1rem}
+  color:var(--marigold);margin:0 0 1.1rem;max-width:none}
 .spine{display:flex;flex-wrap:nowrap;gap:.4rem;margin:0 0 clamp(1.5rem,4vw,2.4rem);
   padding:0 0 2px;list-style:none;overflow-x:auto;-webkit-overflow-scrolling:touch;
   scrollbar-width:none}
@@ -221,7 +222,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 .srclist a{text-decoration:underline;text-underline-offset:.15em;opacity:.68}
 .srclist a:hover{opacity:1}
 .sign{display:flex;flex-wrap:wrap;gap:.5rem 1.3rem;align-items:baseline;margin-top:1.4rem}
-.sign a{font-family:var(--mono);font-size:.68rem;text-decoration:underline;text-underline-offset:.2em}
+.sign a{font-family:var(--mono);font-size:.68rem;text-decoration:underline;text-underline-offset:.2em}.checked{margin:.55rem 0 0;padding-left:.95rem}
 .src-head{display:flex;align-items:center;gap:.5rem;margin-top:2rem}
 .flower-icon{width:18px;height:18px;flex:0 0 auto}
 
@@ -963,12 +964,14 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
     <p class="small" style="margin-top:1.2rem">If a statistic is wrong or stale, let me know. The repo will document the error/fix & your name as reference.</p>
     <p style="margin-top:.6rem"><a class="chip" href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">github.com/TahreemK13/Rising_Tigers_Initiative ↗</a></p>
     <p class="epitaph" style="border-left-color:var(--candle)">A page for counting the dead</p>
+    <p class="epitaph" style="border-left-color:var(--candle)">A page for counting the dead</p>
+    <p class="mono checked">Checked 20 August 2026</p>
+    <div class="sign">
     <div class="sign">
       <span class="mono">By the Rising Tigers Initiative</span>
       <span class="mono">— Tahreem Karim</span>
       <a href="https://portfolio.tahreemkarim.xyz" target="_blank" rel="noopener">portfolio</a>
       <a href="https://garden.tahreemkarim.xyz" target="_blank" rel="noopener">garden</a>
-      <span class="mono">Checked 20 August 2026</span>
     </div>
   </div>
 </footer>
