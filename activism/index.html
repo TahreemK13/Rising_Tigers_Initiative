@@ -66,6 +66,11 @@ strong,b{font-weight:600}
   bottom:-14%;right:-10%;animation:d2 67s ease-in-out infinite alternate}
 @keyframes d1{to{transform:translate(20vw,13vh) scale(1.2)}}
 @keyframes d2{to{transform:translate(-17vw,-10vh) scale(1.14)}}
+/* Low-end devices: the blurred gradients are the most expensive thing here. */
+@media(max-width:48rem){
+  .gh{display:none}
+}
+
 
 /* ── type ── */
 h1,h2,h3{font-family:var(--disp);font-weight:400;letter-spacing:-.005em;line-height:1.06;margin:0}
@@ -103,7 +108,8 @@ p{margin:0 0 .85em;max-width:58ch}
 .tab[aria-selected=true] .lbl{color:var(--bone)}
 .tab .lbl{color:var(--bone);opacity:.92}
 [hidden]{display:none!important}
-
+/* the first section after the masthead shouldn't re-pay for the spine's margin */
+.mast + main > div[role=tabpanel] > .band:first-child{padding-top:clamp(.8rem,2vw,1.4rem)}
 /* Phones: three tabs must fit one row without wrapping or scrolling.
    Tighter tracking + padding buys back the ~110px "CONSERVATION" needs. */
 @media(max-width:26rem){
@@ -306,7 +312,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
     <div class="ghosts" aria-hidden="true"><span class="gh gh2"></span></div>
     <div class="wrap">
       <p class="eyebrow">Congo · Palestine · Sudan</p>
-      <p class="lede">One vault = 100,000 people forced out of their homes.</p>
+      <p class="lede">Each box = 100,000 people forced out of their homes.</p>
 
       <div class="field">
         <div>
@@ -954,18 +960,17 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
       </div>
     </div>
 
-
     <p class="small" style="margin-top:1.2rem">If a statistic is wrong or stale, let me know. The repo will document the error/fix & your name as reference.</p>
     <p style="margin-top:.6rem"><a class="chip" href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">github.com/TahreemK13/Rising_Tigers_Initiative ↗</a></p>
+    <p class="epitaph" style="border-left-color:var(--candle)">A page for counting the dead</p>
     <div class="sign">
-      <span class="mono">By the Rising Tigers Initiative</span><br>
-      <span class="mono">- Tahreem Karim</span>
+      <span class="mono">By the Rising Tigers Initiative</span>
+      <span class="mono">— Tahreem Karim</span>
       <a href="https://portfolio.tahreemkarim.xyz" target="_blank" rel="noopener">portfolio</a>
-      <a href="https://garden.tahreemkarim.xyz" target="_blank" rel="noopener">garden</a> <br>
-      <p class="epitaph" style="border-left-color:var(--candle)">A page for counting the dead</p>
+      <a href="https://garden.tahreemkarim.xyz" target="_blank" rel="noopener">garden</a>
       <span class="mono">Checked 20 August 2026</span>
     </div>
-    </div>
+  </div>
 </footer>
 
 <script>
