@@ -242,6 +242,34 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 .donate-more[open] summary::before{content:'– '}
 .donate-more[open] summary{margin-bottom:.2rem}
 
+/* ── ZIP check ── */
+.zipcheck{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap;margin:.7rem 0 .3rem}
+.zipcheck label{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:currentColor;opacity:.85}
+.zipcheck input{font-family:var(--mono);font-size:.74rem;width:6.5em;padding:.5rem .55rem;
+  background:transparent;color:inherit;border:1px solid var(--hair);border-radius:2px;
+  letter-spacing:.14em;min-height:44px}
+.zipcheck input:focus-visible{outline:2.5px solid var(--candle);outline-offset:2px}
+.zipcheck button{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;padding:.5rem .95rem;cursor:pointer;border:1px solid currentColor;
+  border-radius:2px;background:currentColor;min-height:44px;transition:.15s}
+.day .zipcheck button{color:var(--morado-day)}
+.zipcheck button span{color:var(--bone)}
+.zipcheck button:hover{filter:brightness(1.12)}
+.zipout{font-size:.85rem;line-height:1.5;margin:.45rem 0 0;min-height:1.3em;max-width:34ch}
+.zipout .aqi-n{font-family:var(--disp);font-size:1.6rem;font-weight:400;line-height:1;
+  display:inline-block;vertical-align:-.12em;margin-right:.15em}
+.zipout .aqi-note{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.04em;
+  opacity:.6;margin-top:.3rem;line-height:1.45}
+.zipout a{text-decoration:underline;text-underline-offset:.15em}
+
+/* ── helpers get display type ── */
+.helper-fig{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:.2rem 0 .6rem}
+.helper-fig b{font-family:var(--disp);font-weight:400;line-height:.9;
+  font-size:clamp(2rem,7vw,2.9rem);letter-spacing:-.01em;color:currentColor!important}
+.helper-fig span{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;opacity:.62;max-width:22ch;line-height:1.35;color:var(--ink)}
+
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;
     animation-iteration-count:1!important;transition-duration:.001ms!important}
@@ -257,9 +285,10 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 <header class="band night mast">
   <div class="ghosts" aria-hidden="true"><span class="gh gh1"></span><span class="gh gh2"></span></div>
   <div class="wrap">
-    <p class="brand">By the Rising Tigers Initiative: Tahreem Karim</p>
+
     <h1>Math, Murder, and Making a Difference</h1>
     <p class="subtitle">News and mortality rates tied to my chosen causes. Ways to help right now.</p>
+    <p class="brand">By the Rising Tigers Initiative: Tahreem Karim</p>
 
     <div class="spine" role="tablist" aria-label="Sections" hidden>
       <button class="tab t-war"  role="tab" id="tab-war"  aria-controls="p-war"  aria-selected="true"><span class="lbl">War</span><span class="n">3</span></button>
@@ -427,18 +456,21 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
       <div class="stories">
         <div class="story s-turquesa">
           <span class="who">Congo</span>
+          <p class="helper-fig"><b>1999</b><span>Panzi has treated survivors since</span></p>
           <h3>Women who refuse</h3>
           <p><strong>Julienne Lusenge</strong> names commanders in public and runs a coalition of Congolese women's organisations. <strong>Panzi Hospital</strong> in Bukavu has treated survivors since 1999. And in <strong>Garamba</strong>, a country at war, the giraffes are up fivefold in 14 years.</p>
           <a class="chip" href="https://panzifoundation.org/" target="_blank" rel="noopener">panzifoundation.org ↗</a>
         </div>
         <div class="story s-rosa">
           <span class="who">Palestine</span>
+          <p class="helper-fig"><b>336,000</b><span>children UNICEF is scaling toward</span></p>
           <h3>School's still in session</h3>
           <p>Gaza had some of the highest literacy rates on earth. <strong>Teachers have since kept classes going in shelters the whole time.</strong> <br>UNICEF now scaling toward 336,000 kids. When exams coincided with a pause in the fighting, one teacher called it a miracle.</p>
           <a class="chip" href="https://www.unicef.org/press-releases/rebuilding-hope-unicef-expands-back-learning-hundreds-thousands-children-gaza" target="_blank" rel="noopener">unicef.org ↗</a>
         </div>
         <div class="story s-marigold">
           <span class="who">Sudan</span>
+          <p class="helper-fig"><b>26,000</b><span>volunteers running kitchens, clinics, evacuations</span></p>
           <h3>The Emergency Response Rooms</h3>
           <p>The state government collapsed in April 2023. Now there are 700+ 'neighbour improvised' rooms across all 18 states. <br>26,000+ volunteers running kitchens, clinics and evacuations. Mostly unpaid people in their twenties, often under shelling.</p>
           <a class="chip" href="https://www.mutualaidsudan.org/" target="_blank" rel="noopener">mutualaidsudan.org ↗</a>
@@ -541,8 +573,17 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
             <dt>Plastic</dt>
             <dd>Over 450 million tonnes made a year. Under 10% of all plastic ever made has been recycled.</dd>
             <dt>Why it's here</dt>
-            <dd>This is where "far-away people's problem" stops working. Check your ZIP below.</dd>
+            <dd>This is where "far-away people's problem" stops working. Check your ZIP below. </dd>
           </dl>
+
+          <form class="zipcheck" id="zipcheck" novalidate>
+            <label for="zipin">Your ZIP</label>
+            <input id="zipin" name="zip" inputmode="numeric" maxlength="5"
+                   placeholder="94132" autocomplete="postal-code">
+            <button type="submit"><span>Check</span></button>
+          </form>
+          <p id="zipout" class="zipout" role="status" aria-live="polite"></p>
+
           <div class="src">
             <a class="chip" href="https://ourworldindata.org/data-review-air-pollution-deaths" target="_blank" rel="noopener">OWID · air</a>
             <a class="chip" href="https://ourworldindata.org/plastic-pollution" target="_blank" rel="noopener">OWID · plastic</a>
@@ -587,11 +628,11 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
     <div class="wrap">
       <p class="eyebrow">Free Ideas for starting right now (or tomorrow)</p>
       <div class="acts">
-        <a class="act" href="https://www.airnow.gov/" target="_blank" rel="noopener">
-          <span class="cost">30 sec</span>
-          <span><h3>Check your own air</h3><p>If anyone in your house has asthma ZIP into AirNow.</p></span>
-          <span class="go">airnow.gov ↗</span>
-        </a>
+          <a class="act" id="act-zip" href="#zipin">
+            <span class="cost">30 sec</span>
+            <span><h3>Check your own air</h3><p>Live US AQI for your ZIP, a few sections up this tab. No account, nothing stored.</p></span>
+            <span class="go">jump to it ↑</span>
+          </a>
         <a class="act" href="https://www.globalforestwatch.org/" target="_blank" rel="noopener">
           <span class="cost">5 min</span>
           <span><h3>Watch a forest from orbit</h3><p>Global Forest Watch is free. Pick a place you love, see what's happened since 2001.</p></span>
@@ -747,7 +788,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
         </div>
         <div class="path">
           <h3>PLAYA Art/Sci Residency</h3>
-          <p>Funded, biodiversity-focused, explicitly open to naturalists and data people — not just painters.</p>
+          <p>Funded, biodiversity focused and explicitly open to naturalists & data folk (not just painters).</p>
           <span class="mono">funded · in person · <a href="https://artistcommunities.org/directory/open-calls/2026-artsci-awarded-residency" target="_blank" rel="noopener">artistcommunities.org</a></span>
         </div>
         <div class="path">
@@ -842,7 +883,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
       </div>
 
       <br>
-      <h2>This might all be too much for today!</h2>
+      <h2>This might all be too much for right now!</h2>
       <p class="lede">Reading about atrocities for too long is not healthy. This is a known occupational hazard for professionals. They pace themselves, so we should too.</p>
       <p>Close the tab and get away. Nothing like this expires overnight.</p>
       <p class="small">Dart Center for Journalism and Trauma provides free, unsentimental guidance for reporters. <a href="https://dartcenter.org/topic/self-care" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:.15em">dartcenter.org</a></p>
@@ -992,6 +1033,61 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 
   document.querySelector('.spine').hidden = false;
   show(['war','cons','humanity'].indexOf(location.hash.slice(1)) > -1 ? location.hash.slice(1) : 'war', false);
+
+  /* jump to the ZIP box without hijacking the tab hash */
+  var jump = document.getElementById('act-zip');
+  if (jump) jump.addEventListener('click', function(e){
+    e.preventDefault();
+    var t = document.getElementById('zipin');
+    if (!t) return;
+    t.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
+    t.focus({preventScroll: true});
+  });
+
+  /* ── ZIP -> live AQI. No key, no storage, nothing sent anywhere else. ── */
+  (function(){
+    var f = document.getElementById('zipcheck'); if (!f) return;
+    var out = document.getElementById('zipout');
+    function band(a){
+      if (a <=  50) return ['Good', 'var(--verde-pastel)'];
+      if (a <= 100) return ['Moderate', 'var(--candle)'];
+      if (a <= 150) return ['Unhealthy for sensitive groups', 'var(--marigold)'];
+      if (a <= 200) return ['Unhealthy', 'var(--rosa-day)'];
+      if (a <= 300) return ['Very unhealthy', 'var(--morado-day)'];
+      return ['Hazardous', '#7A1030'];
+    }
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var z = (f.zip.value || '').trim();
+      if (!/^\d{5}$/.test(z)) { out.textContent = 'Five digits, US ZIP.'; return; }
+      out.textContent = 'Checking\u2026';
+      fetch('https://api.zippopotam.us/us/' + z)
+        .then(function(r){ if (!r.ok) throw 0; return r.json(); })
+        .then(function(g){
+          var p = g.places[0],
+              where = p['place name'] + ', ' + p['state abbreviation'];
+          return fetch('https://air-quality-api.open-meteo.com/v1/air-quality?latitude='
+              + p.latitude + '&longitude=' + p.longitude
+              + '&current=us_aqi,pm2_5&timezone=auto')
+            .then(function(r){ return r.json(); })
+            .then(function(d){
+              if (!d.current || d.current.us_aqi == null) throw 0;
+              var a = Math.round(d.current.us_aqi), b = band(a);
+              out.innerHTML =
+                '<span class="aqi-n" style="color:' + b[1] + '">' + a + '</span> \u2014 '
+                + b[0] + ' in ' + where + '. PM2.5 ' + d.current.pm2_5 + ' \u00b5g/m\u00b3.'
+                + '<span class="aqi-note">US AQI, right now. CAMS via Open-Meteo. '
+                + 'Nothing you type is stored or sent anywhere else.</span>';
+            });
+        })
+        .catch(function(){
+          out.innerHTML = 'Couldn\u2019t reach the air data just now. '
+            + '<a href="https://www.airnow.gov/" target="_blank" rel="noopener">'
+            + 'AirNow has it directly \u2197</a>';
+        });
+    });
+  })();
+
 })();
 </script>
 </body>
