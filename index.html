@@ -102,12 +102,10 @@ strong,b{font-weight:600}
 .pause{display:none;min-height:44px;padding:0 .4rem;border:0;background:none;color:inherit;font:600 .9rem var(--body);
   text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
 .js .pause{display:inline-block}
-.sel{position:absolute;left:50%;bottom:2%;z-index:4;width:min(100%,25rem);transform:translateX(-50%);padding:1.1rem .6rem;
-  background:radial-gradient(ellipse 60% 62% at 50% 55%,rgba(23,17,31,.9),rgba(23,17,31,.55) 60%,rgba(23,17,31,0));
-  color:var(--muted);font-size:.9rem;line-height:1.4;pointer-events:none}
+.sel{max-width:25rem;margin:.7rem auto 0;color:var(--muted);font-size:.9rem;line-height:1.4}
 .sel:empty{display:none}
 .sel strong{display:block;color:var(--bone)}
-.sel a{color:var(--candle);font-weight:600;pointer-events:auto}
+.sel a{display:block;margin-top:.15rem;color:var(--candle);font-weight:600}
 
 .lede{position:relative;z-index:2;max-width:64rem;margin-top:.5rem}
 h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;text-wrap:balance}
@@ -244,8 +242,8 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
     <div class="orb" aria-hidden="true"></div>
     <canvas id="globe" role="img" aria-label="A rotating globe. Glowing points mark local guides and the places covered in our article. The same places are listed below."></canvas>
     <div class="nodes" id="nodes"></div>
-    <p class="sel" id="sel" aria-live="polite"></p>
   </div>
+  <p class="sel" id="sel" aria-live="polite"></p>
   <div class="readout">
     <p class="legend" aria-hidden="true"><span class="g"><i></i>Guide</span><span class="w"><i></i>War</span><span class="c"><i></i>Conservation</span></p>
     <button class="pause" id="pause" type="button" aria-pressed="false">Pause globe</button>
@@ -636,7 +634,7 @@ function initGlobe(){
     return best;
   }
   stage.addEventListener('click',e=>{
-    if(e.target.closest('.sel a')||e.target.closest('.node'))return;
+    if(e.target.closest('.node'))return;
     const n=pick(e);if(n)select(n);
   });
   let hov=null;
