@@ -30,7 +30,7 @@
   --disp:'Instrument Serif',ui-serif,Georgia,'Times New Roman',serif;
   --body:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --mono:'DM Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
-  --pad:clamp(1.15rem,5vw,3.5rem);
+  --pad:clamp(1.25rem,5vw,3.5rem);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:4.5rem}
@@ -50,8 +50,8 @@ strong,b{font-weight:600}
 .top{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;
   padding:calc(.55rem + env(safe-area-inset-top,0px)) var(--pad) .55rem;background:rgba(23,17,31,.9);
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
-.brand{display:inline-flex;align-items:center;gap:.55rem;min-height:44px;font:400 1.55rem/1 var(--disp);text-decoration:none}
-.brand i{width:.62rem;height:.62rem;border-radius:50%;background:var(--candle);box-shadow:0 0 .9rem .15rem rgba(242,255,0,.55)}
+.brand{display:inline-flex;align-items:center;min-height:44px;font:400 1.55rem/1 var(--disp);text-decoration:none}
+.brand:hover{text-decoration:underline}
 .top nav{display:flex;flex-wrap:wrap;gap:0 1.3rem}
 .top nav a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:.95rem;text-decoration:none}
 .top nav a:hover{text-decoration:underline}
@@ -147,28 +147,34 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
 @media(min-width:48rem){.rows>li{grid-template-columns:10rem minmax(0,1fr) 13rem;align-items:baseline}.rows .act,.ledger .act{text-align:right}}
 .rows h3{font:400 1.75rem/1.1 var(--disp)}
 .rows p{max-width:56ch;color:var(--muted)}
-.rows .act{font-weight:600;color:var(--candle)}
+.act{font-weight:600;color:var(--candle)}
 .rows small{display:block;margin-top:.4rem;font-size:.88rem;color:var(--muted)}
 
-.feature{max-width:16ch;margin-top:1.6rem;font:400 clamp(2.1rem,6.4vw,4rem)/1.02 var(--disp);letter-spacing:-.012em;text-wrap:balance}
-.feature a{text-decoration:none}
-.feature a:hover{text-decoration:underline;text-decoration-thickness:2px}
-.vault{max-width:36rem;margin-top:1.8rem}
-.vrow{margin-bottom:1rem}
-.vhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .8rem;margin-bottom:.35rem}
-.vname{font:400 1.3rem/1.1 var(--disp)}
-.vnum{font:400 .92rem var(--mono);color:var(--muted)}
-.vgo{margin:-.6rem 0;padding:.6rem 0;font-weight:600;color:var(--candle)}
-@media(min-width:40rem){.vgo{margin-left:auto}}
-.boxes{display:flex;flex-wrap:wrap;gap:2px}
-.boxes i{width:8px;height:8px;border-radius:1px;background:var(--rosa)}
-.vault figcaption{max-width:44ch;margin-top:.8rem;font-size:.88rem;color:var(--muted)}
-.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.shelf-wrap{margin-top:1.6rem}
+.shelf{display:flex;gap:1.1rem;margin:0;padding:.2rem .2rem .9rem;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--hair) transparent}
+.shelf::-webkit-scrollbar{height:6px}
+.shelf::-webkit-scrollbar-thumb{background:var(--hair);border-radius:3px}
+.acard{scroll-snap-align:start;flex:0 0 auto;width:min(80vw,21rem);padding:1.5rem;border:1px solid var(--hair);border-radius:3px;background:rgba(239,232,220,.03);transition:border-color .2s,transform .2s}
+.shelf:has(.acard:only-child) .acard{width:min(80vw,26rem)}
+.acard:hover,.acard:focus-within{border-color:rgba(239,232,220,.32);transform:translateY(-3px)}
+.acard h3{font:400 1.45rem/1.2 var(--disp)}
+.acard h3 a{text-decoration:none}
+.acard h3 a:hover{text-decoration:underline}
+.acard p{margin-top:.6rem;color:var(--muted);font-size:.94rem}
+.pulse{display:flex;gap:2px;height:8px;margin-top:1.2rem;border-radius:4px;overflow:hidden;background:rgba(239,232,220,.08)}
+.pulse span{background:var(--rosa)}
+.pulse span:nth-child(1){flex:var(--c1)}
+.pulse span:nth-child(2){flex:var(--c2)}
+.pulse span:nth-child(3){flex:var(--c3)}
+.acard .act{display:inline-block;margin-top:1.1rem}
+.shelf-nav{display:none;gap:.5rem;justify-content:flex-end;margin-top:.7rem}
+@media(min-width:48rem){.shelf-nav.show{display:flex}}
+.shelf-nav button{min-width:2.25rem;min-height:2.25rem;padding:0;border:1.5px solid var(--hair);border-radius:2px;background:none;color:var(--bone);font:600 1.1rem var(--body);cursor:pointer;transition:border-color .2s}
+.shelf-nav button:hover{border-color:var(--bone)}
 
 .ledger{margin-top:2rem;border-bottom:1px solid var(--hair)}
 .ledger>li{display:grid;gap:.25rem 2rem;padding:1.2rem 0;border-top:1px solid var(--hair)}
 @media(min-width:48rem){.ledger>li{grid-template-columns:10rem minmax(0,1fr) 13rem;align-items:baseline}}
-.ledger .act{font-weight:600;color:var(--candle)}
 .where{display:inline-flex;align-items:center;gap:.5rem;color:var(--muted);font-weight:600;font-size:.95rem}
 .where i{width:.6rem;height:.6rem;border-radius:50%;background:var(--rosa)}
 .ledger h3{font:400 1.75rem/1.1 var(--disp)}
@@ -229,7 +235,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <a class="brand" href="#top" aria-label="Rising Tigers Initiative, top of page"><i></i>Rising Tigers Initiative</a>
+  <a class="brand" href="#top" aria-label="Rising Tigers Initiative, top of page">Rising Tigers Initiative</a>
   <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
   <nav id="nav" aria-label="Sections">
     <a href="#help">Help</a><a href="#articles">Articles</a><a href="#fund">Fund</a><a href="#guide">Guide</a><a href="#about">About</a>
@@ -297,18 +303,25 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   <div class="wrap grid">
     <h2 class="label">Articles</h2>
     <div>
-      <h3 class="feature"><a href="/activism/">Math, Murder, and Making a Difference</a></h3>
-      <p class="lead">News and mortality rates for Congo, Palestine, Sudan, tigers, forests, and air, each with a source and a free way to help today.</p>
-      <figure class="vault">
-        <div class="vrow"><div class="vhead"><span class="vname">Congo</span><span class="vnum">7,000,000+ displaced</span><a class="vgo" href="/artifacts/congo/" aria-label="Free ways to help in Congo">Free ways to help</a></div><div class="boxes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-        <div class="vrow"><div class="vhead"><span class="vname">Palestine</span><span class="vnum">~1,900,000 displaced</span><a class="vgo" href="/artifacts/palestine/" aria-label="Free ways to help in Palestine">Free ways to help</a></div><div class="boxes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-        <div class="vrow"><div class="vhead"><span class="vname">Sudan</span><span class="vnum">13,600,000 displaced</span><a class="vgo" href="/artifacts/sudan/" aria-label="Free ways to help in Sudan">Free ways to help</a></div><div class="boxes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-        <figcaption>Each box is 100,000 people forced out of their homes. Different agencies, 2024–2026, as checked in the article on 20 August 2026.</figcaption>
-      </figure>
-      <div class="actions">
-        <a class="btn primary" href="/activism/">Read the article</a>
-        <a class="btn" href="https://github.com/TahreemK13/Rising_Tigers_Initiative/blob/main/library/sources.md" target="_blank" rel="noopener">See every source</a>
+      <p class="big">What the headlines leave out.</p>
+      <p class="lead">Independent, sourced research on underreported humanitarian and environmental issues, each number dated and linked to where it came from. More pieces will join below as they’re finished.</p>
+      <div class="shelf-wrap">
+        <ul class="shelf" id="shelf" tabindex="0" aria-label="Articles, scroll for more">
+          <!-- Newest first: add new <li class="acard"> entries here, above this one. -->
+          <li class="acard">
+            <h3><a href="/activism/">Math, Murder, and Making a Difference</a></h3>
+            <p>Mortality and displacement in Congo, Palestine, and Sudan, plus tiger, forest, and air-quality trends, each sourced and dated.</p>
+            <div class="pulse" style="--c1:7;--c2:1.9;--c3:13.6" aria-hidden="true"><span></span><span></span><span></span></div>
+            <p>Together, these three crises have displaced more than 22 million people.</p>
+            <a class="act" href="/activism/">Read the article</a>
+          </li>
+        </ul>
+        <div class="shelf-nav" id="shelfNav">
+          <button type="button" data-dir="-1" aria-label="Scroll to previous article">‹</button>
+          <button type="button" data-dir="1" aria-label="Scroll to next article">›</button>
+        </div>
       </div>
+      <p class="more">Every number above is sourced and dated inside its article. <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative/blob/main/library/sources.md" target="_blank" rel="noopener">See every source</a>.</p>
       <ul class="rows">
         <li><h3>The library</h3><p>Every figure as a plain-text file with its source and the date we checked it. Fork it, correct it, use it in your own work.</p>
           <a class="act" href="https://github.com/TahreemK13/Rising_Tigers_Initiative/tree/main/library" target="_blank" rel="noopener">Open the library</a></li>
@@ -419,6 +432,19 @@ const menu=$('.menu'),nav=$('#nav');
 menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(o))});
 nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
 
+/* Article shelf: native horizontal scroll; buttons only appear once there's more than one screen's worth. */
+{
+  const shelf=$('#shelf'),pager=$('#shelfNav');
+  if(shelf&&pager){
+    const sync=()=>pager.classList.toggle('show',shelf.scrollWidth>shelf.clientWidth+4);
+    pager.addEventListener('click',e=>{
+      const b=e.target.closest('button');if(!b)return;
+      shelf.scrollBy({left:shelf.clientWidth*.9*+b.dataset.dir,behavior:reduce?'auto':'smooth'});
+    });
+    sync();new ResizeObserver(sync).observe(shelf);
+  }
+}
+
 /* Guide: one region at a time. Without JavaScript every region is shown. */
 const panels=$$('.panel'),chips=$$('.chips a'),autoNote=$('#auto');
 function showRegion(id,scroll,auto){
@@ -505,7 +531,7 @@ function initGlobe(){
 
   const view={lon:-70*D2R,lat:22*D2R};
   const LIGHT=[-.4,.5,.77];
-  let W=0,R=0,dpr=1,svl=0,cvl=1,raf=0,last=0,heroVisible=true,animating=!reduce&&!lite,dragging=false,idleUntil=0,target=null,sel=null;
+  let W=0,R=0,dpr=1,svl=0,cvl=1,raf=0,last=0,heroVisible=true,animating=!reduce&&!lite,dragging=false,idleUntil=0,target=null,sel=null,gHalo,gBody,gBoot=-1;
   const t0=performance.now(),out=[0,0,0];
 
   function P(la,lo,r){ /* orthographic projection about the view centre */
@@ -516,7 +542,15 @@ function initGlobe(){
     const r=cv.getBoundingClientRect();if(!r.width)return;
     W=r.width;dpr=Math.min(window.devicePixelRatio||1,2.5);
     cv.width=Math.round(W*dpr);cv.height=Math.round(W*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
-    R=W*.46/1.2;
+    R=W*.46/1.2;gBoot=-1;
+  }
+
+  function buildGlow(cx,cy,boot){ /* halo + body gradients only change on resize or during boot-in, so cache them */
+    gHalo=ctx.createRadialGradient(cx,cy,R*.92,cx,cy,R*1.22);
+    gHalo.addColorStop(0,'rgba(123,79,207,'+(.36*boot).toFixed(3)+')');gHalo.addColorStop(1,'rgba(123,79,207,0)');
+    gBody=ctx.createRadialGradient(cx-R*.34,cy-R*.4,R*.08,cx,cy,R);
+    gBody.addColorStop(0,'#33244A');gBody.addColorStop(.55,'#211829');gBody.addColorStop(1,'#120D19');
+    gBoot=boot;
   }
 
   function draw(now){
@@ -526,13 +560,10 @@ function initGlobe(){
     const boot=reduce?1:clamp(t/1.1,0,1),arcA=reduce?1:clamp((t-1.4)/1.2,0,1);
     ctx.clearRect(0,0,S,S);
 
-    /* halo and body */
-    let g=ctx.createRadialGradient(cx,cy,R*.92,cx,cy,R*1.22);
-    g.addColorStop(0,'rgba(123,79,207,'+(.36*boot).toFixed(3)+')');g.addColorStop(1,'rgba(123,79,207,0)');
-    ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,R*1.22,0,TAU);ctx.fill();
-    g=ctx.createRadialGradient(cx-R*.34,cy-R*.4,R*.08,cx,cy,R);
-    g.addColorStop(0,'#33244A');g.addColorStop(.55,'#211829');g.addColorStop(1,'#120D19');
-    ctx.globalAlpha=boot;ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,R,0,TAU);ctx.fill();
+    /* halo and body: gradient objects are cached, since re-allocating two of them 60x/sec forever (long after boot finishes) is pure waste */
+    if(boot!==gBoot)buildGlow(cx,cy,boot);
+    ctx.fillStyle=gHalo;ctx.beginPath();ctx.arc(cx,cy,R*1.22,0,TAU);ctx.fill();
+    ctx.globalAlpha=boot;ctx.fillStyle=gBody;ctx.beginPath();ctx.arc(cx,cy,R,0,TAU);ctx.fill();
     ctx.strokeStyle='rgba(190,165,255,.30)';ctx.lineWidth=1;ctx.stroke();
 
     /* graticule */
