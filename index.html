@@ -213,12 +213,13 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
 .principles dd{max-width:58ch;color:var(--muted)}
 .principles dd a{color:var(--candle);font-weight:600}
 .founder{margin-top:1.5rem;color:var(--muted)}
-.foot{padding:2.5rem 0 3.5rem;border-top:1px solid var(--hair);font-size:.92rem;color:var(--muted)}
-.foot .wrap{display:grid;gap:1.4rem}
-@media(min-width:48rem){.foot .wrap{grid-template-columns:1fr auto;align-items:start}}
-.foot ul{display:flex;flex-wrap:wrap;gap:0 1.2rem}
-.foot a{display:inline-flex;align-items:center;min-height:44px}
-.foot p+p{margin-top:.4rem}
+.foot{padding:1.75rem 0 3.5rem;border-top:1px solid var(--hair);font-size:.92rem;color:var(--muted)}
+.foot .wrap{display:grid;gap:1rem}
+@media(min-width:48rem){.foot .wrap{grid-template-columns:16rem 1fr;column-gap:2.5rem;align-items:start}}
+.foot p+p{margin-top:.6rem}
+.foot p a{text-decoration:underline;text-underline-offset:.2em}
+.foot ul{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.1rem;margin-top:.9rem}
+.foot ul a{display:inline-flex;align-items:center;min-height:44px}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media print{ /* prints the guide only: the region you picked (all regions if JavaScript is off) */
@@ -377,14 +378,14 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   <div class="wrap grid">
     <h2 class="label">About</h2>
     <div>
-      <p class="lead">We are an informational nonprofit org. serving students who are navigating college applications, early-career professionals planning their path, and immigrants building new lives. We connect mentees ("Rising Tigers") with a global network of volunteer professional mentors ("Luminaries"). Beyond mentorship, we publish independent, sourced research on (generally) underreported humanitarian/environmental issues. Access to reliable information is itself a form of opportunity.</p>
+      <p class="lead">We are an informational nonprofit organization founded in 2025 serving students who are navigating college applications, early-career professionals planning their path, and immigrants building new lives. We connect mentees ("Rising Tigers") with a global network of volunteer professional mentors ("Luminaries"). Beyond mentorship, we publish independent, sourced research on (generally) underreported humanitarian/environmental issues. Access to reliable information is itself a form of opportunity.</p>
       <dl class="principles">
         <div><dt>Sourced</dt><dd>Every number links to its reference and the date we checked it. If something is wrong, the repository records the fix and your name.</dd></div>
         <div><dt>Free and open</dt><dd>No ads. Code is MIT-licensed; writing and data are CC BY 4.0.</dd></div>
         <div><dt>Direct</dt><dd>Plain numbers, named sources, no euphemisms. Tigers don’t mess around, and neither do we.</dd></div>
         <div><dt>Luminaries</dt><dd>Volunteer professionals sharing their knowledge <a data-mail data-subject="I’d like to be a Luminary" data-body="Hi,&#10;&#10;My field: &#10;Where I’m based: &#10;What I could share: &#10;&#10;Thanks," href="https://www.linkedin.com/company/rising-tigers-initiative/" target="_blank" rel="noopener">Want to be one?</a></dd></div>
       </dl>
-      <p class="founder">Founded in 2025 by Tahreem Karim. <a href="https://buymeacoffee.com/risingtigersinitiative" target="_blank" rel="noopener">Buy us a coffee</a></li></p>
+
     </div>
   </div>
 </section>
@@ -394,16 +395,22 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   <div class="wrap">
     <div>
       <p><strong>The Rising Tigers Initiative</strong></p>
+      <p>Founded March 2025</p>
       <p>Code is MIT-licensed. Writing and data are CC BY 4.0. No ads.</p>
-      <p>We share information and referrals, not legal, medical, or emergency advice.</p>
-      <p>Updated 19 September 2026.</p>
     </div>
-    <ul>
-      <li><a href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/company/rising-tigers-initiative/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://portfolio.tahreemkarim.xyz" target="_blank" rel="noopener">Portfolio</a></li>
-      <li><a href="https://www.tahreemkarim.xyz/free-resources" target="_blank" rel="noopener">More free resources</a></li>
-    </ul>
+    <div>
+      <p>Page built Sept 2026: by Tahreem Karim (<a href="https://portfolio.tahreemkarim.xyz" target="_blank" rel="noopener">Portfolio</a>).</p>
+      <p>See the code behind it on <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">GitHub</a> or help us brainstorm on the <a href="https://garden.tahreemkarim.xyz/free-resources" target="_blank" rel="noopener">digital garden page</a>!</p>
+      <p><a href="https://buymeacoffee.com/risingtigersinitiative" target="_blank" rel="noopener">Buy us a coffee</a>. We share free information/referrals, NOT legal, or medical advice.</p>
+      <br>
+      <ul>
+        <li><a class="btn primary" href="mailto:therisingtigersinitiative@gmail.com">therisingtigersinitiative@gmail.com</a></li>
+        <li><a class="btn primary" href="https://www.linkedin.com/company/rising-tigers-initiative/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="btn primary" href="https://www.instagram.com/the_rising_tigers_initiative/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a class="btn primary" href="https://www.threads.com/@the_rising_tigers_initiative" target="_blank" rel="noopener">Threads</a></li>
+      </ul>
+
+    </div>
   </div>
 </footer>
 
