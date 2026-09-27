@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Rising Tigers Initiative: a global information hub</title>
+<title>Rising Tigers Initiative: A Global Info. Hub</title>
 <meta name="description" content="Free mentorship through college applications, careers, and immigration. Additionally, we publish independent/sourced research on underreported humanitarian/environmental issues and local guides.">
 <link rel="canonical" href="https://risingtigers.tahreemkarim.xyz/">
 <meta name="theme-color" content="#17111F">
@@ -257,7 +257,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   </div>
   <div class="lede">
     <h1 id="h1"><span>Information</span> <span>Made</span> <span>Easy</span> </h1>
-    <p>We mentor ambitious people through college applications, careers, and immigration, and publish independent, sourced research on underreported humanitarian and environmental issues.</p>
+    <p>Most of what stands between people and their dreams is paperwork written in a language only select groups of people seem to understand. We expedite that process with personalized infographics similar to this page, and free consultations.</p>
     <div class="cta">
       <a class="btn primary" href="#help">Get help</a>
       <a class="btn" href="/activism/">Read the article</a>
@@ -285,7 +285,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
     <h2 class="label">Help</h2>
     <div>
       <p class="big">Access is the only barrier</p>
-      <p class="lead">Most of what stands between people and their dreams is paperwork written in a language only select groups of people seem to understand. We expedite that process with personalized infographics similar to this page, and free consultations.</p>
+      <p class="lead">      We mentor anyone struggling with college applications, career paths, and immigration. We also publish independent, sourced research on underreported humanitarian and environmental issues.</p>
       <ul class="rows">
         <li><h3>College</h3><p>Essays, applications, and the unwritten rules of admissions.</p>
           <a class="act" data-mail data-subject="College help from Rising Tigers" data-body="Hi,&#10;&#10;I’m working on: &#10;Where I’m stuck: &#10;Deadline (if any): &#10;&#10;Thanks," href="https://www.linkedin.com/company/rising-tigers-initiative/" target="_blank" rel="noopener">Ask about college</a></li>
@@ -325,11 +325,11 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
       <p class="more">Every number above is sourced and dated inside its article. <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative/blob/main/library/sources.md" target="_blank" rel="noopener">See every source</a>.</p>
       <ul class="rows">
         <li><h3>The library</h3><p>Every figure as a plain-text file with its source and the date we checked it. Fork it, correct it, use it in your own work.</p>
-          <a class="act" href="https://github.com/TahreemK13/Rising_Tigers_Initiative/tree/main/library" target="_blank" rel="noopener">Open the library</a></li>
+          <a class="act" href="#" target="_blank" rel="noopener">Open the library</a></li>
         <li><h3>Artifacts</h3><p>More pieces are coming: curricula, dashboards, and tools, ours and contributors’.</p>
-          <a class="act" href="https://github.com/TahreemK13/Rising_Tigers_Initiative/tree/main/artifacts" target="_blank" rel="noopener">Browse artifacts</a></li>
-        <li><h3>Contribute</h3><p>Found a stale figure or a dead link? Have a piece that argues something and cites its sources?</p>
-          <a class="act" href="https://github.com/TahreemK13/Rising_Tigers_Initiative/tree/main/docs" target="_blank" rel="noopener">Read the docs</a></li>
+          <a class="act" href="https://risingtigers.tahreemkarim.xyz/activism" target="_blank" rel="noopener">Browse artifacts</a></li>
+        <li><h3>Contribute to the work</h3><p>Found a stale figure or a dead link? Have a piece that argues something while citing its sources?</p>
+          <a class="act" href="mailto:therisingtigersinitiative@gmail.com" target="_blank" rel="noopener">SHow us</a></li>
       </ul>
     </div>
   </div>
@@ -400,7 +400,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
     </div>
     <div>
       <p>Page built Sept 2026: by Tahreem Karim (<a href="https://portfolio.tahreemkarim.xyz" target="_blank" rel="noopener">Portfolio</a>).</p>
-      <p>See the code behind it on <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">GitHub</a> or help us brainstorm on the <a href="https://garden.tahreemkarim.xyz/free-resources" target="_blank" rel="noopener">digital garden page</a>!</p>
+      <p>See the code behind it on <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">GitHub</a> or help us brainstorm on the <a href="https://www.garden.tahreemkarim.xyz/free-resources" target="_blank" rel="noopener">digital garden page</a>!</p>
       <p><a href="https://buymeacoffee.com/risingtigersinitiative" target="_blank" rel="noopener">Buy us a coffee</a>. We share free information/referrals, NOT legal, or medical advice.</p>
       <br>
       <ul>
@@ -434,6 +434,18 @@ $$('[data-mail]').forEach(a=>{
   a.removeAttribute('target');a.removeAttribute('rel');
 });
 
+/* Fallback for mailto links: some mobile/in-app browsers (Instagram, LinkedIn, Threads)
+   have no registered mail handler and hang instead of failing, so copy the address too. */
+$$('a[href^="mailto:"]').forEach(a=>{
+  a.addEventListener('click',async e=>{
+    const addr=decodeURIComponent(a.href.replace(/^mailto:/,'').split('?')[0]);
+    try{await navigator.clipboard.writeText(addr)}catch(_){return}
+    const label=a.textContent;
+    a.textContent='Copied — paste into your email app';
+    setTimeout(()=>{a.textContent=label},2200);
+  });
+});
+  
 /* Menu (small screens) */
 const menu=$('.menu'),nav=$('#nav');
 menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(o))});
