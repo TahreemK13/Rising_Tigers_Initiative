@@ -225,7 +225,10 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 .sign a{font-family:var(--mono);font-size:.68rem;text-decoration:underline;text-underline-offset:.2em}
 .checked{margin:.55rem 0 0;padding-left:.95rem}
 .src-head{display:flex;align-items:center;gap:.5rem;margin-top:2rem}
+.src-head+*{margin-top:clamp(1.3rem,3.2vw,2rem)}
 .flower-icon{width:18px;height:18px;flex:0 0 auto}
+.wind-down .lede,.wind-down p,.wind-down .small{max-width:70ch}
+.wind-down .epitaph{max-width:72ch}
 
 /* ── donate cards + link strips ── */
 .donate-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.6rem}
@@ -318,7 +321,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 
     <h1>Math, Murder, and Making a Difference</h1>
     <p class="subtitle">News and mortality rates tied to my chosen causes. Ways to help right now.</p>
-    <p class="brand"><a href="https://www.linkedin.com/in/tahreem-karim" target="_blank" rel="noopener">By Tahreem Karim</a></p>
+    <p class="brand">By the Rising Tigers Initiative: Tahreem Karim</p>
 
     <div class="spine" role="tablist" aria-label="Sections" hidden>
       <button class="tab t-war"  role="tab" id="tab-war"  aria-controls="p-war"  aria-selected="true"><span class="lbl">War</span><span class="n">3</span></button>
@@ -850,6 +853,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
   <div class="wrap">
 
 
+      <div class="wind-down">
       <div class="src-head">
         <svg class="flower-icon" viewBox="0 0 100 100" aria-hidden="true">
           <defs><path id="pet" d="M50 39C44 27 44 19 50 9c6 10 6 18 0 30"/></defs>
@@ -864,7 +868,6 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 
       </div>
 
-      <br>
       <h2>This might all be too much for right now!</h2>
       <p class="lede">Reading about atrocities for too long is not healthy. This is a known occupational hazard for professionals. They pace themselves, so we should too.</p>
       <p>Close the tab and get away. Nothing like this expires overnight.</p>
@@ -883,10 +886,9 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
         </svg>
 
       </div>
-      <br>
-      <br>
-      <p class="eyebrow" style="margin:0">Housekeeping</p>
-      <p class="epitaph">If you have an issue with these statistics, I encourage you to argue with: <br>- backed up sources & research date stamps <br>- the UN <br>- a wall.</p>
+      <p class="eyebrow">Housekeeping</p>
+      <p class="epitaph">If you have an issue with these statistics, I encourage you to argue&nbsp;with: <br>- backed up sources & research date stamps <br>- the UN <br>- a wall.</p>
+      </div>
 
       <p class="eyebrow" style="margin-top:2.2rem">Sources</p>
     <p class="small" style="margin:0 0 .9rem">Every source below also lives as a plain file you can read, fork or correct
