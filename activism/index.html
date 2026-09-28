@@ -135,7 +135,9 @@ p{margin:0 0 .85em;max-width:58ch}
 @keyframes seal{from{opacity:0;transform:translateY(-3px)}to{opacity:.8;transform:none}}
 .v-congo{color:var(--turquesa)} .v-pal{color:var(--rosa)} .v-sudan{color:var(--verde-pastel)}
 .fnote{margin-top:1.1rem;padding-top:.8rem;border-top:1px solid var(--hair)}
-
+.fgroup{display:block;text-decoration:none;color:inherit}
+.fgroup:hover .fplace,.fgroup:focus-visible .fplace{text-decoration:underline;text-underline-offset:.2em}
+.fgroup:hover .fval,.fgroup:focus-visible .fval{opacity:.9}
 /* ── cards ── */
 .cards{display:grid;gap:clamp(.9rem,2.2vw,1.3rem);grid-template-columns:1fr;
   margin-top:clamp(1.2rem,3vw,1.8rem)}
@@ -321,7 +323,7 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
 
     <h1>Math, Murder, and Making a Difference</h1>
     <p class="subtitle">News and mortality rates tied to my chosen causes. Ways to help right now.</p>
-    <p class="brand">By the Rising Tigers Initiative: Tahreem Karim</p>
+    <p class="brand">By <a href="https://www.linkedin.com/in/tahreem-karim" target="_blank" rel="noopener">Tahreem Karim</a></p>
 
     <div class="spine" role="tablist" aria-label="Sections" hidden>
       <button class="tab t-war"  role="tab" id="tab-war"  aria-controls="p-war"  aria-selected="true"><span class="lbl">War</span><span class="n">3</span></button>
@@ -342,18 +344,18 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
       <p class="lede">Each box = 100,000 people forced out of their homes.</p>
 
       <div class="field">
-        <div>
+        <a class="fgroup" href="/artifacts/congo/">
           <div class="fhead"><span class="fplace">Congo</span><span class="fval">7,000,000+ displaced over mining rights</span></div>
           <div class="vaults v-congo" data-n="70" aria-hidden="true"></div>
-        </div>
-        <div>
+        </a>
+        <a class="fgroup" href="/artifacts/palestine/">
           <div class="fhead"><span class="fplace">Palestine</span><span class="fval">~1,900,000 · every 9/10 people in Gaza</span></div>
           <div class="vaults v-pal" data-n="19" aria-hidden="true"></div>
-        </div>
-        <div>
+        </a>
+        <a class="fgroup" href="/artifacts/sudan/">
           <div class="fhead"><span class="fplace">Sudan</span><span class="fval">13,600,000 · largest displacement crisis on earth</span></div>
           <div class="vaults v-sudan" data-n="136" aria-hidden="true"></div>
-        </div>
+        </a>
       </div>
       <p class="mono fnote">Different agencies, 2024–2026.</p>
 
