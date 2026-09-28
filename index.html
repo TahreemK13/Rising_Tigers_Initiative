@@ -205,14 +205,12 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
 .check{max-width:70ch;margin-top:2.2rem;padding-top:1rem;border-top:1px solid rgba(36,27,43,.2);font-size:.9rem;color:rgba(36,27,43,.82)}
 
 /* about + footer */
-.mission{max-width:34ch;font:400 clamp(1.5rem,3.6vw,2.2rem)/1.25 var(--disp);text-wrap:pretty}
 .principles{margin-top:2.2rem;border-bottom:1px solid var(--hair)}
 .principles>div{display:grid;gap:.2rem 2rem;padding:1rem 0;border-top:1px solid var(--hair)}
 @media(min-width:48rem){.principles>div{grid-template-columns:10rem minmax(0,1fr)}}
 .principles dt{font:400 1.4rem/1.1 var(--disp)}
 .principles dd{max-width:58ch;color:var(--muted)}
 .principles dd a{color:var(--candle);font-weight:600}
-.founder{margin-top:1.5rem;color:var(--muted)}
 .foot{padding:1.75rem 0 3.5rem;border-top:1px solid var(--hair);font-size:.92rem;color:var(--muted)}
 .foot .wrap{display:grid;gap:1rem}
 @media(min-width:48rem){.foot .wrap{grid-template-columns:16rem 1fr;column-gap:2.5rem;align-items:start}}
@@ -224,7 +222,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media print{ /* prints the guide only: the region you picked (all regions if JavaScript is off) */
   body{background:#fff;color:#000}
-  .top,.hero,#help,#articles,#fund,#about,.foot,.chips,.auto,.lead,.big{display:none!important}
+  .top,.hero,#apply,#articles,#cause,#about,.foot,.chips,.auto,.lead,.big{display:none!important}
   .day{background:#fff!important;color:#000!important;padding:0;border:0}
   .day::before{content:"Rising Tigers Initiative, risingtigers.tahreemkarim.xyz";display:block;margin:0 0 1rem;font-size:.85rem}
   .grid{display:block}.label{position:static;color:#000}
@@ -239,7 +237,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   <a class="brand" href="#top" aria-label="Rising Tigers Initiative, top of page">The Rising Tigers Initiative</a>
   <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
   <nav id="nav" aria-label="Sections">
-    <a href="#help">Help</a><a href="#articles">Articles</a><a href="#fund">Fund</a><a href="#guide">Guide</a><a href="#about">About</a>
+    <a href="#apply">Help</a><a href="#articles">Articles</a><a href="#cause">Causes</a><a href="#guide">Guides</a><a href="#about">About</a>
   </nav>
 </header>
 
@@ -252,14 +250,14 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   </div>
   <p class="sel" id="sel" aria-live="polite"></p>
   <div class="readout">
-    <p class="legend" aria-hidden="true"><span class="g"><i></i>Guide</span><span class="w"><i></i>War</span><span class="c"><i></i>Conservation</span></p>
+    <p class="legend" aria-hidden="true"><span class="g"><i></i>Guides</span><span class="w"><i></i>War</span><span class="c"><i></i>Conservation</span></p>
     <button class="pause" id="pause" type="button" aria-pressed="false">Pause globe</button>
   </div>
   <div class="lede">
     <h1 id="h1"><span>Information</span> <span>Made</span> <span>Easy</span> </h1>
     <p>Most of what stands between people and their dreams is paperwork written in a language only select groups of people seem to understand. We expedite that process with personalized infographics similar to this page, and free consultations.</p>
     <div class="cta">
-      <a class="btn primary" href="#help">Get help</a>
+      <a class="btn primary" href="#apply">Get help</a>
       <a class="btn" href="/activism/">Read the article</a>
     </div>
   </div>
@@ -280,9 +278,9 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   </details>
 </section>
 
-<section class="band" id="help">
+<section class="band" id="apply">
   <div class="wrap grid">
-    <h2 class="label">Help</h2>
+    <h2 class="label">Apply</h2>
     <div>
       <p class="big">Access is the only barrier</p>
       <p class="lead">We mentor anyone struggling with college applications, career paths, and immigration. We also publish independent, sourced research on underreported humanitarian and environmental issues.</p>
@@ -304,7 +302,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   <div class="wrap grid">
     <h2 class="label">Articles</h2>
     <div>
-      <p class="big">What the headlines leave out.</p>
+      <p class="big" style="max-width:none">What the headlines leave out.</p>
       <p class="lead">Independent, sourced research on underreported humanitarian and environmental issues, each number dated and linked to where it came from. More pieces will join below as they’re finished.</p>
       <div class="shelf-wrap">
         <ul class="shelf" id="shelf" tabindex="0" aria-label="Articles, scroll for more">
@@ -335,9 +333,9 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
   </div>
 </section>
 
-<section class="band" id="fund">
+<section class="band" id="cause">
   <div class="wrap grid">
-    <h2 class="label">Fund</h2>
+    <h2 class="label">Causes</h2>
     <div>
       <p class="big">Direct Donations.</p>
       <p class="lead">Rising Tigers doesn’t handle your money. Each link goes straight to the organization, and the article explains why we trust these three.</p>
@@ -355,7 +353,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
 
 <section class="band day" id="guide">
   <div class="wrap grid">
-    <h2 class="label">Guide</h2>
+    <h2 class="label">Guides</h2>
     <div>
       <p class="big" style="grid-column:1/-1;max-width:none;font-size:clamp(1.15rem,4vw,3.5rem)">Numbers/places worth having before you need them.</p>
       <p class="lead">Pick your region. Everything here is free to use, and each entry links to the organization’s own page when it has one.</p>
@@ -399,7 +397,7 @@ h1{font:400 clamp(2.2rem,7.4vw,4.1rem)/1.02 var(--disp);letter-spacing:-.012em;t
     </div>
     <div>
       <p>Page built Sept 2026: by Tahreem Karim (<a href="https://portfolio.tahreemkarim.xyz" target="_blank" rel="noopener">Portfolio</a>).</p>
-      <p>See the code behind it on <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">GitHub</a> or help us brainstorm on the <a href="https://www.garden.tahreemkarim.xyz/free-resources" target="_blank" rel="noopener">digital garden page</a>!</p>
+      <p>See the code behind it on <a href="https://github.com/TahreemK13/Rising_Tigers_Initiative" target="_blank" rel="noopener">GitHub</a> or help us brainstorm on the <a href="https://garden.tahreemkarim.xyz/posts/rti_brainstorm.html" target="_blank" rel="noopener">digital garden page</a>!</p>
       <p><a href="https://buymeacoffee.com/risingtigersinitiative" target="_blank" rel="noopener">Buy us a coffee</a>. We share free information/referrals, NOT legal, or medical advice.</p>
       <br>
       <ul>
