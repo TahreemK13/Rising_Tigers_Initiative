@@ -285,9 +285,32 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
   .chart .line{stroke-dashoffset:0} .chart .pt{opacity:1}
   .gh{display:none}
 }
+
+/* ── site header (matches home page) ── */
+.st-top{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;
+  padding:calc(.55rem + env(safe-area-inset-top,0px)) var(--pad) .55rem;background:rgba(23,17,31,.9);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);color:var(--bone)}
+.st-brand{display:inline-flex;align-items:center;min-height:44px;font:400 1.55rem/1 var(--disp);text-decoration:none}
+.st-brand:hover{text-decoration:underline}
+.st-nav{display:flex;flex-wrap:wrap;gap:0 1.3rem}
+.st-nav a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:.95rem;text-decoration:none}
+.st-nav a:hover{text-decoration:underline}
+.st-menu{display:none}
+.st-js .st-menu{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1.5px solid var(--hair);border-radius:2px;background:none;color:var(--bone);font:600 .95rem var(--body);cursor:pointer}
+.st-js .st-nav{display:none;flex-basis:100%;flex-direction:column;padding:.2rem 0 .6rem}
+.st-js .st-nav.open{display:flex}
+@media(min-width:48rem){.st-js .st-menu{display:none}.st-js .st-nav,.st-js .st-nav.open{display:flex;flex-basis:auto;flex-direction:row;padding:0}.st-brand{order:1}}
 </style>
 </head>
 <body>
+
+<header class="st-top">
+  <a class="st-brand" href="/" aria-label="Rising Tigers Initiative, home">The Rising Tigers Initiative</a>
+  <button class="st-menu" type="button" aria-expanded="false" aria-controls="st-nav">Menu</button>
+  <nav class="st-nav" id="st-nav" aria-label="Site sections">
+    <a href="/#help">Help</a><a href="/#articles">Articles</a><a href="/#fund">Fund</a><a href="/#guide">Guide</a><a href="/#about">About</a>
+  </nav>
+</header>
 
 <!-- ══════════ MASTHEAD + TABS ══════════ -->
 <header class="band night mast">
@@ -1046,6 +1069,14 @@ a.act:hover h3,a.act:focus-visible h3{text-decoration:underline;text-underline-o
     });
   })();
 
+})();
+</script>
+<script>
+(function(){
+  var b=document.querySelector('.st-menu'),n=document.getElementById('st-nav');
+  document.documentElement.classList.add('st-js');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o))});
+  n.addEventListener('click',function(e){if(e.target.closest('a')){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
 })();
 </script>
 </body>
