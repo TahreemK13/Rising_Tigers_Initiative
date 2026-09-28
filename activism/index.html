@@ -107,7 +107,7 @@ p{margin:0 0 .85em;max-width:58ch}
 .small a{text-decoration:underline;text-underline-offset:.15em}
 .mono{font-family:var(--mono);font-size:.68rem;letter-spacing:.02em;opacity:.62}
 .eyebrow{
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;
   opacity:.55;margin:0 0 .9rem;max-width:none;
 }
 .eyebrow.gap{margin:1.6rem 0 0}
@@ -391,6 +391,17 @@ footer .path:nth-child(3n+3){border-left-color:var(--verde-pastel)}
 .flower-icon{width:18px;height:18px;flex:none}
 .src-head{display:flex;align-items:center;gap:.5rem;margin-top:2rem}
 .src-head + *{margin-top:clamp(1.3rem,3.2vw,2rem)}
+
+/* first flower: drop its own top margin (the band's top padding already gives room
+   below the color break), and add that same 2rem to the gap after it instead, so the
+   flower sits closer to the break above and the heading gets more air below it */
+.wind-down .src-head:first-of-type{margin-top:0;margin-bottom:0}
+.wind-down .src-head:first-of-type + *{margin-top:calc(clamp(1.3rem,3.2vw,2rem) + .5rem)}
+
+/* second flower (right before Housekeeping): same 2rem, moved from above it to below,
+   so it sits closer to the self-care copy and the gap opens up before Housekeeping */
+.wind-down .src-head:last-of-type{margin-top:1.5;margin-bottom:7rem}
+.wind-down .src-head:last-of-type + *{margin-top:calc(clamp(1.3rem,3.2vw,2rem) + .5rem)}
 .wind-down p{max-width:70ch}
 .wind-down .epitaph{max-width:72ch}
 .epitaph--candle{border-left-color:var(--candle)!important}
@@ -448,7 +459,8 @@ footer .path:nth-child(3n+3){border-left-color:var(--verde-pastel)}
   <div class="ghosts" aria-hidden="true"><span class="gh gh1"></span><span class="gh gh2"></span></div>
   <div class="wrap">
     <h1>Math, Murder, and Making a Difference</h1>
-    <p class="subtitle">News and mortality rates tied to my chosen causes. Ways to help right now.</p>
+    <p class="subtitle" style="max-width:none">Data visualization vignettes sharing news, mortality rates, & aid narrowed to certain causes. Ways to help right now .</p>
+    <p class="eyebrow">Part 1: Congo · Palestine · Sudan</p>
     <p class="brand">By <a href="https://www.linkedin.com/in/tahreem-karim">Tahreem Karim</a></p>
 
     <div class="spine" role="tablist" aria-label="Sections" hidden>
@@ -467,7 +479,6 @@ footer .path:nth-child(3n+3){border-left-color:var(--verde-pastel)}
   <section class="band night">
     <div class="ghosts" aria-hidden="true"><span class="gh gh2"></span></div>
     <div class="wrap">
-      <p class="eyebrow">Congo · Palestine · Sudan</p>
       <p class="lede">Each box = 100,000 people forced out of their homes.</p>
 
       <div class="field">
@@ -484,9 +495,9 @@ footer .path:nth-child(3n+3){border-left-color:var(--verde-pastel)}
           <div class="vaults v-sudan" data-n="136" aria-hidden="true"></div>
         </a>
       </div>
-      <p class="mono fnote">Different agencies, 2024–2026.</p>
+      <p class="mono fnote" style="max-width:none">Different agencies, 2024–2026. All institutions linked from this page are vetted.</p>
 
-      <p class="eyebrow gap">Help right now</p>
+      <p class="eyebrow gap">Help right now.</p>
       <div class="donate-row">
         <a class="donate-card v-congo" href="https://panzifoundation.org/donate/">
           <span class="donate-title">Congo — Panzi Foundation ↗</span>
@@ -645,8 +656,8 @@ footer .path:nth-child(3n+3){border-left-color:var(--verde-pastel)}
 
   <section class="band day day2">
     <div class="wrap">
-      <h2>So? What to do?</h2>
-      <p class="lede">Make a difference by spending time instead of money</p>
+      <h2>No money? No problem</h2>
+      <p class="lede" style="max-width:none">Make a difference by spending time instead, or ask about finding your own causes!</p>
       <div class="acts">
         <a class="act" href="https://www.usa.gov/elected-officials">
           <span class="cost">2 min</span>
@@ -667,7 +678,6 @@ footer .path:nth-child(3n+3){border-left-color:var(--verde-pastel)}
           <span><h3>Remember facts for casual conversation, and mention them</h3><p>Helpful during epic dinner table debates or for remembering to be grateful</p></span>
         </div>
       </div>
-      <p class="small wide" style="margin-top:1.7rem;margin-bottom:-1.5rem">Just trying to send money somewhere legitimate? The institutions linked from this page are vetted, or ask about finding your own!</p>
     </div>
   </section>
 </div>
@@ -981,8 +991,8 @@ footer .path:nth-child(3n+3){border-left-color:var(--verde-pastel)}
       <div class="src-head"><svg class="flower-icon" aria-hidden="true"><use href="#flower"/></svg></div>
 
       <h2>This might all be too much for right now!</h2>
-      <p class="lede">Reading about atrocities for too long is not healthy. This is a known occupational hazard for professionals. They pace themselves, so we should too.</p>
       <p>Close the tab and get away. Nothing like this expires overnight.</p>
+      <p class="lede" style="max-width:none;">Reading about atrocities for too long is not healthy. This is a known occupational hazard for professionals. They pace themselves, so we should too.</p>
       <p class="small wide">Dart Center for Journalism and Trauma provides free, unsentimental guidance for reporters. <a href="https://dartcenter.org/topic/self-care">dartcenter.org</a></p>
 
       <div class="src-head"><svg class="flower-icon" aria-hidden="true"><use href="#flower"/></svg></div>
